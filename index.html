@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AgriCraft Graph</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<div id="explain">
+			<!--<h2 id="packTitle">Loading...</h2>-->
+			<label for="selectMode">Version:</label> <select name="modes" id="selectMode"></select>
+			<hr>
+			<h3>Click a crop to show the breeding tree.</h3>
+			<button id="btnReset">Reset the view</button>
+				
+			<p>
+			<span style="color:blue">Blue</span> nodes are potential offspring.
+			<br>
+			<span style="color:red">Red</span> nodes are required to breed.
+			</p>
+			<hr>
+			<ul id="list"></ul>
+		</div>
+
+
+		<div id="cy"></div>
+
+		<script src="lib/jquery-1.12.3.min.js"></script>
+		<script src="lib/require.js" data-main="main.js"></script>
+
+	</body>
+</html>

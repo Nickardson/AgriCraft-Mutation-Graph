@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+}
+
+#cy {
+	width: 80%;
+	height: 800px;
+	height: 100vh;
+	display: block;
+}
+
+#explain, #cy {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+#explain {
+	box-sizing: border-box;
+	padding: 10px;
+	width: 20%;
+	height: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+#list {
+	list-style: none;
+}
+
+@media (min-width: 1600px) {
+	#list {
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+	}
+}
+
+#list>li {
+	cursor: pointer;
+}
+
+#list>li:hover {
+	color: blue;
+}
+
+#list>li.unimportant {
+	font-style: italic;
+	color: gray;
+}
+#list>li.unimportant:before {content: '(';}
+#list>li.unimportant:after {content: ')';}

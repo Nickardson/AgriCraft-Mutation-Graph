@@ -1,0 +1,263 @@
+[
+  {
+    "result": "agricraft:seedTulipOrange",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedNiccissus",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedPlombean",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedDandelion",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 1.0
+  },
+  {
+    "result": "agricraft:seedPotato",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 1.0
+  },
+  {
+    "result": "agricraft:seedOrchid",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 1.0
+  },
+  {
+    "result": "agricraft:seedPetinia",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedTulipRed",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedEmeryllis",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.2
+  },
+  {
+    "result": "agricraft:seedLapender",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.33
+  },
+  {
+    "result": "agricraft:seedNitorWart",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedTulipWhite",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedCuprosia",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedDaisy",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedAurigold",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedDiamahlia",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.2
+  },
+  {
+    "result": "agricraft:seedCactus",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedRedstodendron",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.33
+  },
+  {
+    "result": "agricraft:seedTulipPink",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedFerranium",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedQuartzanthemum",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedShroomRed",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedPlatiolus",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedSugarcane",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 1.0
+  },
+  {
+    "result": "agricraft:seedPoppy",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 1.0
+  },
+  {
+    "result": "agricraft:seedSilverweed",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.25
+  },
+  {
+    "result": "agricraft:seedShroomBrown",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedAllium",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 0.5
+  },
+  {
+    "result": "agricraft:seedCarrot",
+    "resultMeta": 0,
+    "parent1": "minecraft:pumpkin_seeds",
+    "parent1Meta": 0,
+    "parent2": "minecraft:wheat_seeds",
+    "parent2Meta": 0,
+    "chance": 1.0
+  }
+]

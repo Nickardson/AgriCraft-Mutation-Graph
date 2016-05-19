@@ -1,0 +1,4 @@
+Brown=Red+Green
+Orange=Red+Yellow
+Purple=Red+Blue
+Odd=A+B
