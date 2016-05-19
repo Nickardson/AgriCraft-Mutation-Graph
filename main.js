@@ -1,4 +1,4 @@
-/* global require, $:false, console:false */
+/* global require, $:false, console:false, confirm:false */
 "use strict";
 
 require.config({
@@ -9,6 +9,15 @@ require.config({
 });
 
 require(['cytoscape'], function(cytoscape){
+	function coseLayout() {
+		cy.layout({
+			name: 'cose',
+			/*nodeRepulsion: function (node) {
+				return node.hasClass('ownednode') ? 4000000 : 400000;
+			}*/
+		});
+	}
+
 	function safe(name) {
 	    return name.replace(/[^a-z0-9\-_\.]|^[^a-z]+/gi, "");
 	}
@@ -223,14 +232,28 @@ require(['cytoscape'], function(cytoscape){
 					'border-color': '#DEC417',
 					'border-width': '5px'
 				}
+			},
+
+			{
+				selector: 'node.ownednode',
+				style: {
+					'background-color': '#EEE',
+					'color': '#888',
+					'shape': 'diamond'
+				}
+			},
+
+			{
+				selector: 'edge.ownededge',
+				style: {
+					'opacity': 0.5,
+					'line-style': 'dashed'
+				}
 			}
-		],
-
-		layout: {
-			name: 'cose'
-		}
-
+		]
 	});
+
+	coseLayout();
 
 	// style nodes without any predecessors as italics
 	function markUnimportantNodes() {
@@ -247,6 +270,7 @@ require(['cytoscape'], function(cytoscape){
 	cy.on('mouseover', 'node', function(e) {
 		var node = e.cyTarget;
 		node.addClass('selectednode');
+		
 		var to = node.outgoers();
 		to.edges().addClass('childedge');
 		to.nodes().addClass('childnode');
@@ -261,9 +285,58 @@ require(['cytoscape'], function(cytoscape){
 		cy.edges().removeClass('childedge parentedge');
 	}
 
+	var owned = {};
+
+	function setOwnedNode(node, isowned) {
+		node.toggleClass('ownednode', isowned);
+		if (isowned) {
+			node.incomers().edges().addClass('ownededge');
+		} else {
+			node.incomers().edges().removeClass('ownededge');
+		}
+
+		if (owned[currentSet.name] === undefined) {
+			owned[currentSet.name] = {};
+		}
+
+		if (isowned) {
+			owned[currentSet.name][node.id()] = true;
+		} else {
+			delete owned[currentSet.name][node.id()];
+		}
+
+		if (localStorage) {
+			localStorage.cropsowned = JSON.stringify(owned);
+		}
+	}
+
+	function markOwnedNodes() {
+		cy.nodes().forEach(function (node) {
+			if (owned[currentSet.name] && owned[currentSet.name][node.id()] === true) {
+				setOwnedNode(node, true);
+			}
+		});
+	}
+
+
+
+	var holding = false;
+	cy.on('cxttapstart', 'node', function(e) {
+		holding = true;
+
+		var node = e.cyTarget;
+		setOwnedNode(node, !node.hasClass('ownednode'));
+	});
+
+	cy.on('cxttapend', 'node', function() {
+		holding = false;
+	});
+
 	cy.on('tap', 'node', function(e) {
-		clearHighlights(e);
-		target(e.cyTarget.id());
+		if (!holding) {
+			clearHighlights(e);
+			target(e.cyTarget.id());
+		}
 	});
 
 	cy.on('mouseout', 'node', clearHighlights);
@@ -271,11 +344,10 @@ require(['cytoscape'], function(cytoscape){
 	$('#btnReset').click(function () {
 		untarget();
 
-		cy.layout({
-			name: 'cose'
-		});
+		coseLayout();
 	});
 
+	var currentSet;
 	var sets = {
 		agrarianSkies2: {
 			name: "AgriCraft 1.7.10 + Agrarian Skies 2",
@@ -309,6 +381,12 @@ require(['cytoscape'], function(cytoscape){
 	};
 
 	function loadSet(set) {
+		currentSet = set;
+
+		if (localStorage && localStorage.cropsowned !== undefined) {
+			owned = JSON.parse(localStorage.cropsowned);
+		}
+
 		$('#packTitle').text(set.name);
 		$('#list').empty();
 
@@ -321,10 +399,9 @@ require(['cytoscape'], function(cytoscape){
 			cy.add(elements);
 
 			markUnimportantNodes();
+			markOwnedNodes();
 
-			cy.layout({
-				name: 'cose'
-			});
+			coseLayout();
 		});
 	}
 
@@ -339,5 +416,19 @@ require(['cytoscape'], function(cytoscape){
 	$('#selectMode').change(function () {
 		console.log("Loading set", $(this).val());
 		loadSet(sets[$(this).val()]);
+	});
+
+	$('#btnClearOwned').click(function () {
+		if (confirm("Are you sure you want to reset all crops marked as owned?")) {
+			var set = cy.nodes();
+			if (removed) {
+				set = set.union(removed);
+			}
+			set.forEach(function (node) {
+				setOwnedNode(node, false);
+			});
+
+			localStorage.cropsowned = '{}';
+		}
 	});
 });
